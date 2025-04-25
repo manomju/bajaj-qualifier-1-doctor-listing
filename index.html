@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Directory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <input type="text" id="autocomplete-input" placeholder="Search doctors..." data-testid="autocomplete-input" />
+    <ul id="suggestions-list"></ul>
+  </header>
+
+  <aside id="filters">
+    <!-- Consultation Mode -->
+    <div>
+      <h3 data-testid="filter-header-moc">Consultation Mode</h3>
+      <label><input type="radio" name="consultation" value="Video" data-testid="filter-video-consult" /> Video Consult</label><br/>
+      <label><input type="radio" name="consultation" value="InClinic" data-testid="filter-in-clinic" /> In Clinic</label>
+    </div>
+
+    <!-- Specialties -->
+    <div>
+      <h3 data-testid="filter-header-speciality">Speciality</h3>
+      <div id="specialty-checkboxes"></div>
+    </div>
+
+    <!-- Sort -->
+    <div>
+      <h3 data-testid="filter-header-sort">Sort</h3>
+      <label><input type="radio" name="sort" value="fees" data-testid="sort-fees" /> Fees (Low to High)</label><br/>
+      <label><input type="radio" name="sort" value="experience" data-testid="sort-experience" /> Experience (High to Low)</label>
+    </div>
+  </aside>
+
+  <main>
+    <div id="doctor-list"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
